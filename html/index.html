@@ -7,8 +7,8 @@
         window.onload = function() {
             // on Windows, none of the Go<>JS bindings work on the first page load
             // so reload, then continue.
-            if (location.search !== '?reinit') {
-                location.search = '?reinit';
+            if (location.search === '?reinit') {
+                location.search = '';
                 return;
             }
         };

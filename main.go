@@ -34,7 +34,7 @@ func main() {
 		},
 	})
 	w.SetSize(800, 600, webview2.HintNone)
-	w.Navigate("http://" + lis.Addr().String())
+	w.Navigate("http://" + lis.Addr().String() + "?reinit")
 
 	w.Bind("ready", func() { // nolint: errcheck
 		fmt.Println("this is called only once")
